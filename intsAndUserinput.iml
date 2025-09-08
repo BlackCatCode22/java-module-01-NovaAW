@@ -1,11 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+import java.util.Scanner;
+
+public class IntsAndUserImputs {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to 'IntsAndUserImputs'");
+
+
+        System.out.print("Please enter a whole number for num1: ");
+        int num1 = scanner.nextInt();
+        System.out.println("You entered " + num1 + " for num1.");
+
+
+        System.out.print("Please enter a whole number for num2: ");
+        int num2 = scanner.nextInt();
+        System.out.println("You entered " + num2 + " for num2.");
+
+
+        System.out.print("Please enter a whole number for num3: ");
+        int num3 = scanner.nextInt();
+        System.out.println("You entered " + num3 + " for num3.");
+
+
+        if (num1 >= num2 && num1 >= num3) {
+            System.out.println("The largest number is: " + num1);
+        } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println("The largest number is: " + num2);
+        } else {
+            System.out.println("The largest number is: " + num3);
+        }
+
+        scanner.close();
+    }
+}
